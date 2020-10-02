@@ -1,0 +1,33 @@
+body {
+  background: #eff7fa;
+}
+
+$base-size: 16px;
+@mixin font-size($target, $context: $base-size) {
+  font-size: ($target/$context) * 1rem;
+}
+h1 {
+  @include font-size(35px);
+  font-weight: 500;
+  color: #1a2940;
+  margin-top: 160px;
+  position: relative;
+}
+h1::before {
+  content: "";
+  position: absolute;
+  background: url(../images/ico.svg) no-repeat;
+  width: 76px;
+  height: 58px;
+}
+span {
+  @include font-size(15px);
+  font-weight: 400;
+  color: #a8b9c0;
+  text-transform: uppercase;
+}
+.border {
+  width: 150px;
+  height: 2px;
+  background: #70dddb;
+}
