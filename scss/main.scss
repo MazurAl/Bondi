@@ -1,6 +1,9 @@
 body {
   background: #eff7fa;
 }
+* {
+  box-sizing: border-box;
+}
 
 $base-size: 16px;
 @mixin font-size($target, $context: $base-size) {
@@ -11,23 +14,58 @@ h1 {
   font-weight: 500;
   color: #1a2940;
   margin-top: 160px;
+  margin-bottom: 12px;
   position: relative;
 }
 h1::before {
   content: "";
   position: absolute;
-  background: url(../images/ico.svg) no-repeat;
+  background: url(../../images/ico.svg) no-repeat;
   width: 76px;
   height: 58px;
+  bottom: 85px;
+  right: 75px;
 }
 span {
   @include font-size(15px);
   font-weight: 400;
   color: #a8b9c0;
   text-transform: uppercase;
+  margin-bottom: 12px;
 }
-.border {
-  width: 150px;
-  height: 2px;
-  background: #70dddb;
+.row.border {
+  margin-bottom: 43px;
+  border: none !important;
+  span {
+    width: 150px;
+    height: 2px;
+    background: #70dddb;
+  }
+}
+.nav-pills {
+  margin-bottom: 60px;
+  .nav-link.active {
+    color: #ffbb06;
+    background: #ff3150;
+  }
+  .nav-link {
+    color: #a8b9c0;
+  }
+}
+.gallery {
+  margin-bottom: 30px;
+  img {
+    width: 100%;
+  }
+}
+.row.button {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  .btn-primary {
+    color: #ffc501;
+    background: #ff3150;
+    border: none;
+    border-radius: 15px;
+    padding: 0.75rem 3.125rem;
+  }
 }
